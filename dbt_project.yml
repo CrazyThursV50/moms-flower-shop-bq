@@ -35,5 +35,7 @@ models:
   moms_flower_shop_uni:
     staging: # Config indicated by + and applies to all files under models/example/
       +materialized: view
+      +schema: moms_flower_staging
     marts:
       +materialized: table
+      +schema: moms_flower_marts

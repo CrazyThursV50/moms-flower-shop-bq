@@ -1,0 +1,97 @@
+version: 2
+
+sources:
+  - name: moms_flower_shop
+    database: mystic-advice-496301-c6
+    schema: raw_flower_shop
+    tables:
+      - name: raw_addresses
+        columns:
+          - name: index
+            data_type: int64
+          - name: address_id
+            data_type: int64
+          - name: full_address
+            data_type: string
+          - name: street_number
+            data_type: int64
+          - name: street_name
+            data_type: string
+          - name: state
+            data_type: string
+          - name: city
+            data_type: string
+
+      - name: raw_customers
+        columns:
+          - name: id
+            data_type: int64
+          - name: first_name
+            data_type: string
+          - name: last_name
+            data_type: string
+          - name: email
+            data_type: string
+          - name: gender
+            data_type: string
+          - name: address_id
+            data_type: int64
+
+      - name: raw_flower_orders
+        columns:
+          - name: order_id
+            data_type: int64
+          - name: customer_id
+            data_type: int64
+          - name: order_time
+            data_type: int64
+          - name: order_value
+            data_type: float64
+          - name: flowers_amount
+            data_type: float64
+          - name: vase_amount
+            data_type: float64
+          - name: chocolate_amount
+            data_type: float64
+          - name: delivery_id
+            data_type: int64
+          - name: platform
+            data_type: string
+
+      - name: raw_marketing_campaign_events
+        columns:
+          - name: event_id
+            data_type: int64
+          - name: event_time
+            data_type: int64
+          - name: campaign_id
+            data_type: int64
+          - name: campaign_name
+            data_type: string
+          - name: c_name
+            data_type: string
+          - name: priority
+            data_type: int64
+          - name: cost
+            data_type: float64
+
+      - name: raw_website_events
+        columns:
+          - name: index
+            data_type: int64
+          - name: event_id
+            data_type: int64
+          - name: customer_id
+            data_type: int64
+          - name: event_time
+            data_type: int64
+          - name: event_name
+            data_type: string
+          - name: event_value
+            data_type: float64
+          - name: additional_details
+            data_type: string
+          - name: platform
+            data_type: string
+          - name: campaign_id
+            data_type: float64
