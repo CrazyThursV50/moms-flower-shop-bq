@@ -1,0 +1,30 @@
+models:
+  - name: stg_mfs_flower_orders
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+
+  - name: stg_mfs_website_events
+    columns:
+      - name: event_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        data_tests:
+          - not_null
+      - name: event_name
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                - 'page_hit'
+                - 'add_to_cart'
+                - 'go_to_checkout'
+                - 'place_order'
